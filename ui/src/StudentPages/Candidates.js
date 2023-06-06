@@ -87,7 +87,7 @@ export default function Candidates() {
   const departmentIds = [1, 2, 3, 4];
   const voteForm = (
     <div className="container">
-      {candidates.length > 0 && authCtx.userRole === "officer" && (
+      {candidates.length > 0 && authCtx.userRole !== "rector" && (
         <ul>
           {candidates.map((candidate, index) => {
             return (
